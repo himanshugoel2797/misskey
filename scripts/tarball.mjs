@@ -13,6 +13,7 @@ const ignore = [
 	'**/*ignore',
 	'**/.gitmodules',
 	// Exclude files you don't want to include in the tarball here
+	'**/.config/default.yml',
 ];
 
 export default async function build() {
