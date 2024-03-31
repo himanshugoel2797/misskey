@@ -22,7 +22,8 @@ const compressTypeMapFallback = {
 } as const;
 
 export async function getCompressionConfig(file: File): Promise<BrowserImageResizerConfigWithConvertedOutput | undefined> {
-	const imgConfig = (isWebpSupported() ? compressTypeMap : compressTypeMapFallback)[file.type];
+	//const imgConfig = (isWebpSupported() ? compressTypeMap : compressTypeMapFallback)[file.type];
+	const imgConfig = compressTypeMapFallback[file.type];
 	if (!imgConfig || await isAnimated(file)) {
 		return;
 	}
