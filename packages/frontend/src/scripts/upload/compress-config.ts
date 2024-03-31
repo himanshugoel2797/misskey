@@ -15,10 +15,12 @@ const compressTypeMap = {
 } as const;
 
 const compressTypeMapFallback = {
-	'image/jpeg': { quality: 0.85, mimeType: 'image/jpeg' },
-	'image/png': { quality: 1, mimeType: 'image/png' },
-	'image/webp': { quality: 0.85, mimeType: 'image/jpeg' },
-	'image/svg+xml': { quality: 1, mimeType: 'image/png' },
+	'image/jpeg': { quality: 0.9, mimeType: 'image/jpeg' },
+	//'image/png': { quality: 1, mimeType: 'image/png' },
+	'image/png': { quality: 0.9, mimeType: 'image/jpeg' },
+	'image/webp': { quality: 0.9, mimeType: 'image/jpeg' },
+	//'image/svg+xml': { quality: 1, mimeType: 'image/png' },
+	'image/svg+xml': { quality: 0.9, mimeType: 'image/jpeg' },
 } as const;
 
 export async function getCompressionConfig(file: File): Promise<BrowserImageResizerConfigWithConvertedOutput | undefined> {
