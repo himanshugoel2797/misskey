@@ -39,7 +39,7 @@ const hide = ref(true);
 
 watch(audioEl, () => {
 	if (audioEl.value) {
-		audioEl.value.volume = 1.0;
+		audioEl.value.volume = 0.3;
 	}
 });
 </script>
